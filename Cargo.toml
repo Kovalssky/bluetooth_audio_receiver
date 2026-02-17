@@ -1,0 +1,22 @@
+[package]
+name = "bt_audio_receiver"
+version = "0.0.1"
+edition = "2021"
+
+[[bin]]
+name = "BT-Audio-Receiver"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0"
+tray-icon = "0.21.3"
+winit = "0.30.12"
+winreg = "0.55.0"
+native-dialog = "0.7.0"
+self_update = {version = "0.42.0", features = ["archive-zip", "compression-zip-deflate"]}
+tokio = { version = "1.49.0", features = ["full"] }
+windows = { version = "0.52.0", features = ["Devices_Enumeration", "Foundation_Collections", "Media_Audio", "Media_Render", "Win32_Foundation", "Win32_System_Threading", "Foundation", "Media_Control", "Media_Capture", "Media_MediaProperties"] }
+image = "0.25.9"
+
+[build-dependencies]
+embed-resource = "3.0.6"
