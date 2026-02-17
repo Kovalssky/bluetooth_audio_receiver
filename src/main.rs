@@ -122,11 +122,6 @@ async fn main() -> Result<()> {
     // Применяем настройки реестра
     ensure_registry_settings().expect("Failed to fix registry");
 
-    // Фоновая проверка обновлений (тихая)
-    tokio::spawn(async {
-        let _ = Updater::check_and_update(true).await;
-    });
-
     // Создаем трей
     let tray = TrayIconBuilder::new()
         .with_menu(Box::new(build_menu(&[], None)))

@@ -61,6 +61,7 @@ impl Updater {
                 .repo_owner("Kovalssky")
                 .repo_name("bluetooth_audio_receiver")
                 .bin_name("BT-Audio-Receiver")
+                .target("x86_64-pc-windows-msvc")
                 .show_download_progress(true)
                 .current_version(cargo_crate_version!())
                 .build()
